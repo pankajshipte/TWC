@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Temporal Tag Cloud</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css"/>
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <script src="js/myscripts.js"></script> 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.v2.min.js"></script>
+    <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
+</head>
+<body onload="hideButtons();setPageSVG(60,'Outputs/topic_words', '0'); getSVG();">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Temporal Tag Cloud</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="animation.html" disabled=true>Processing</a></li>
+        <li class="active"><a href="index.html">Result</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container special">
+    <div id="time"></div>
+    <div class="jumbotron">
+        <div id="image"></div>
+        <div id="buttons">
+            <BUTTON type="button" class="btn btn-default" id="prev" onclick="getPrevBtn()">Prev</BUTTON>
+        	<BUTTON type="button" class="btn btn-primary" id="next" onclick="getNextBtn()">Next</BUTTON>
+        	<BUTTON type="button" class="btn btn-primary" id="stop" onclick="stopAnimation()">Pause</BUTTON>
+        	<BUTTON type="button" class="btn btn-default" id="resume" onclick="resumeAnimation();hideButtons()">Resume</BUTTON>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
